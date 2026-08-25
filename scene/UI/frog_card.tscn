@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgbrywuxeeawe"]
+
+[ext_resource type="Script" uid="uid://coyf1t2qys11d" path="res://script/ui/frog_card.gd" id="1_vwtn6"]
+
+[node name="FrogCard" type="PanelContainer"]
+custom_minimum_size = Vector2(220, 240)
+offset_right = 238.0
+offset_bottom = 240.0
+script = ExtResource("1_vwtn6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "coucou"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+expand_mode = 2
+
+[node name="HungerBar" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2

@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3d5ltw6jrxb7"]
+
+[ext_resource type="Script" uid="uid://b6j1qqv2v8g8f" path="res://script/ui/frog_menu.gd" id="1_emgym"]
+[ext_resource type="Texture2D" uid="uid://dgap25shf1gx6" path="res://sprite/ui/bouton/close button.png" id="2_chkx3"]
+
+[node name="FrogMenu" type="CanvasLayer"]
+script = ExtResource("1_emgym")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 171.0
+offset_top = 114.0
+offset_right = 964.0
+offset_bottom = 530.0
+
+[node name="TitleLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 11.0
+offset_right = 70.0
+offset_bottom = 36.0
+text = "menu"
+
+[node name="CloseButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 730.0
+offset_top = 20.0
+offset_right = 776.0
+offset_bottom = 67.0
+icon = ExtResource("2_chkx3")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 80.80188
+offset_right = 409.0
+offset_bottom = 627.1981
+
+[node name="GridContainer" type="GridContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+columns = 3
+
+[connection signal="pressed" from="Panel/CloseButton" to="." method="_on_close_button_pressed"]

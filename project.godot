@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="grennou"
+run/main_scene="uid://bxxuv5i6cdvcf"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+UIManager="*res://script/ui/ui_manager.gd"
+FrogSlotsManager="*res://script/garden/frog_slots_manager.gd"
+InventoryManager="*res://script/ui/inventory/inventory_manager.gd"
+PlayerProgress="*res://script/data/player_progress.gd"
+FrogDatabase="*res://script/data/database/frog_database.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080

@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfusqpk6iklr8"]
+
+[ext_resource type="Script" uid="uid://bap7tnhhewibi" path="res://script/ui/inventory/inventory.gd" id="1_spf34"]
+[ext_resource type="Texture2D" uid="uid://dgap25shf1gx6" path="res://sprite/ui/bouton/close button.png" id="2_adv38"]
+
+[node name="inventory" type="CanvasLayer"]
+script = ExtResource("1_spf34")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 146.0
+offset_top = 86.0
+offset_right = 1009.0
+offset_bottom = 549.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 46.0
+offset_bottom = 25.0
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 8.0
+offset_right = 106.0
+offset_bottom = 48.0
+columns = 3
+
+[node name="CloseButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 801.0
+offset_top = 21.0
+offset_right = 847.0
+offset_bottom = 68.0
+icon = ExtResource("2_adv38")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Panel/CloseButton" to="." method="_on_close_button_pressed"]

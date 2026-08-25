@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxnn50hpj0wkk"]
+
+[ext_resource type="Texture2D" uid="uid://65o2vvnv0vpx" path="res://sprite/garden.png" id="1_4ojea"]
+[ext_resource type="PackedScene" uid="uid://b1sx228sa0syv" path="res://scene/garden/house.tscn" id="2_d4r2e"]
+[ext_resource type="PackedScene" uid="uid://bpn2bsowffydo" path="res://scene/garden/greenhouse.tscn" id="3_c5aao"]
+[ext_resource type="PackedScene" uid="uid://24dlyu5g61kb" path="res://scene/garden/lily_pad.tscn" id="4_l67df"]
+[ext_resource type="PackedScene" uid="uid://bsspvupg03rjf" path="res://scene/frog/butt_frog.tscn" id="5_i3a5j"]
+[ext_resource type="Script" uid="uid://cdat8cfylhxo0" path="res://script/garden/frog_slots_manager.gd" id="5_v8cra"]
+
+[node name="garden" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(998, 590.00006)
+scale = Vector2(2.206301, 2.2063007)
+texture = ExtResource("1_4ojea")
+
+[node name="House" parent="." instance=ExtResource("2_d4r2e")]
+position = Vector2(1654, 222)
+
+[node name="greenhouse" parent="." instance=ExtResource("3_c5aao")]
+position = Vector2(167, 178)
+
+[node name="frog_slot" type="Node2D" parent="."]
+
+[node name="lily pad" parent="frog_slot" groups=["FrogSlots"] instance=ExtResource("4_l67df")]
+position = Vector2(728, 392)
+
+[node name="lily pad2" parent="frog_slot" groups=["FrogSlots"] instance=ExtResource("4_l67df")]
+position = Vector2(518, 379)
+
+[node name="lily pad3" parent="frog_slot" groups=["FrogSlots"] instance=ExtResource("4_l67df")]
+position = Vector2(1586, 712)
+
+[node name="lily pad4" parent="frog_slot" groups=["FrogSlots"] instance=ExtResource("4_l67df")]
+position = Vector2(1174, 861)
+
+[node name="lily pad5" parent="frog_slot" groups=["FrogSlots"] instance=ExtResource("4_l67df")]
+position = Vector2(946, 387)
+
+[node name="lily pad6" parent="frog_slot" groups=["FrogSlots"] instance=ExtResource("4_l67df")]
+position = Vector2(1212, 571)
+
+[node name="slotsManager" type="Node" parent="frog_slot"]
+script = ExtResource("5_v8cra")
+
+[node name="frogs" type="Node2D" parent="."]
+
+[node name="butt_frog" parent="frogs" groups=["Frogs"] instance=ExtResource("5_i3a5j")]
+position = Vector2(877, 647)

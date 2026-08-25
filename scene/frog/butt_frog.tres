@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FrogData" load_steps=2 format=3 uid="uid://b53icorbwla27"]
+
+[ext_resource type="Script" uid="uid://c8fkak0k0avvq" path="res://script/data/resources/frog_data.gd" id="1_abrid"]
+
+[resource]
+script = ExtResource("1_abrid")
+id = "001"
+display_name = "butt_frog"
+metadata/_custom_type_script = "uid://c8fkak0k0avvq"

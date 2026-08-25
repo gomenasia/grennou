@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://wxhcqyv24s2l"]
+
+[ext_resource type="Script" uid="uid://v1ow5m2cismt" path="res://script/greenhouse_inside.gd" id="1_ajp6n"]
+[ext_resource type="Texture2D" uid="uid://rkpr0lnswt60" path="res://sprite/greenhouse_inside.png" id="2_he7fd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00426"]
+size = Vector2(212, 377)
+
+[node name="greenhouse_inside" type="Node2D"]
+script = ExtResource("1_ajp6n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(583.55554, 324)
+scale = Vector2(0.5962963, 0.5962963)
+texture = ExtResource("2_he7fd")
+
+[node name="porte" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="porte"]
+position = Vector2(185, 458.5)
+shape = SubResource("RectangleShape2D_00426")

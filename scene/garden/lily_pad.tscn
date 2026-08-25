@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://24dlyu5g61kb"]
+
+[ext_resource type="Script" uid="uid://b6tnssypckval" path="res://script/garden/lily_pad.gd" id="1_oxuwe"]
+[ext_resource type="Texture2D" uid="uid://b1rsyqmjbm01q" path="res://sprite/lily_pad.png" id="1_sq1ym"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sq1ym"]
+radius = 90.04999
+
+[node name="lily pad" type="Node2D"]
+script = ExtResource("1_oxuwe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.48929688, 0.4892966)
+texture = ExtResource("1_sq1ym")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_sq1ym")

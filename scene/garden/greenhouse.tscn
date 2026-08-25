@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpn2bsowffydo"]
+
+[ext_resource type="Texture2D" uid="uid://bmft6e1ds5pud" path="res://sprite/greenhouse.png" id="1_e2ta3"]
+[ext_resource type="Script" uid="uid://dqlk58rbv4tx3" path="res://script/garden/greenhouse.gd" id="1_pupnj"]
+
+[node name="greenhouse" type="Node2D"]
+script = ExtResource("1_pupnj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.1461989, 1.1461984)
+texture = ExtResource("1_e2ta3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(8.118056, 16.366798)
+scale = Vector2(1.1863426, 1.1863427)
+polygon = PackedVector2Array(-111, 117, -113, -3, -114, -160, -4, -239, 102, -159, 102, -1, 102, 116)

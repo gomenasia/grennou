@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://uiiirdgj1fmr"]
+
+[ext_resource type="Texture2D" uid="uid://c6082bp3u1far" path="res://sprite/ui/hotbar_background.png" id="1_0b0sx"]
+[ext_resource type="PackedScene" uid="uid://d3pof6yv8obph" path="res://scene/UI/inventory_slot.tscn" id="1_44rjq"]
+[ext_resource type="Texture2D" uid="uid://d31ynt4e3y7ty" path="res://sprite/ui/bouton/inventory.png" id="2_bynfs"]
+[ext_resource type="Script" uid="uid://bvn4wt664tddc" path="res://script/ui/btn/inventory_btn.gd" id="3_uutdj"]
+
+[node name="hotbar" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -350.0
+offset_top = -75.0
+offset_right = 350.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -37.5
+offset_right = 350.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0b0sx")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -36.0
+offset_right = 342.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="inventory_btn" type="Button" parent="Control/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+icon = ExtResource("2_bynfs")
+flat = true
+script = ExtResource("3_uutdj")
+
+[node name="GridContainer" type="GridContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+columns = 9
+
+[node name="iventory_slot" parent="Control/HBoxContainer/GridContainer" groups=["inventory_slots_hotbar"] instance=ExtResource("1_44rjq")]
+layout_mode = 2
+
+[node name="iventory_slot2" parent="Control/HBoxContainer/GridContainer" groups=["inventory_slots_hotbar"] instance=ExtResource("1_44rjq")]
+layout_mode = 2
+
+[node name="iventory_slot3" parent="Control/HBoxContainer/GridContainer" groups=["inventory_slots_hotbar"] instance=ExtResource("1_44rjq")]
+layout_mode = 2
+
+[node name="iventory_slot4" parent="Control/HBoxContainer/GridContainer" groups=["inventory_slots_hotbar"] instance=ExtResource("1_44rjq")]
+layout_mode = 2
+
+[node name="iventory_slot5" parent="Control/HBoxContainer/GridContainer" groups=["inventory_slots_hotbar"] instance=ExtResource("1_44rjq")]
+layout_mode = 2
+
+[node name="iventory_slot6" parent="Control/HBoxContainer/GridContainer" groups=["inventory_slots_hotbar"] instance=ExtResource("1_44rjq")]
+layout_mode = 2
+
+[node name="iventory_slot7" parent="Control/HBoxContainer/GridContainer" groups=["inventory_slots_hotbar"] instance=ExtResource("1_44rjq")]
+layout_mode = 2
+
+[node name="iventory_slot8" parent="Control/HBoxContainer/GridContainer" groups=["inventory_slots_hotbar"] instance=ExtResource("1_44rjq")]
+layout_mode = 2
+
+[node name="iventory_slot9" parent="Control/HBoxContainer/GridContainer" groups=["inventory_slots_hotbar"] instance=ExtResource("1_44rjq")]
+layout_mode = 2

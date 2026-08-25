@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://biajtjhvqlhj8"]
+
+[ext_resource type="Script" uid="uid://dq7l4rcr70j3w" path="res://script/house_inside.gd" id="1_664mo"]
+[ext_resource type="Texture2D" uid="uid://sxumluq7rxvv" path="res://sprite/house_inside.png" id="2_f26km"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4fx8"]
+size = Vector2(220, 457)
+
+[node name="house inside" type="Node2D"]
+script = ExtResource("1_664mo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.11115, 324.00003)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_f26km")
+
+[node name="porte" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="porte"]
+position = Vector2(157, 419.5)
+shape = SubResource("RectangleShape2D_a4fx8")
