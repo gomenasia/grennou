@@ -29,3 +29,9 @@ func toggle_inventory() -> void:
 
 func toggle_unlock() -> void:
 	toggle(panels.get("unlock_frog_menu"))
+
+func show_frog_card(frog: FrogClass) -> void:
+	var card = panels.get("frog_card")
+	if card:
+		card.set_data(frog)
+		toggle(card)

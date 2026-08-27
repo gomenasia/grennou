@@ -3,14 +3,14 @@
 [ext_resource type="Script" uid="uid://b6j1qqv2v8g8f" path="res://script/ui/frog_menu.gd" id="1_emgym"]
 [ext_resource type="Texture2D" uid="uid://dgap25shf1gx6" path="res://sprite/ui/bouton/close button.png" id="2_chkx3"]
 
-[node name="FrogMenu" type="CanvasLayer"]
+[node name="UnlockMenu" type="CanvasLayer"]
 script = ExtResource("1_emgym")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 171.0
 offset_top = 114.0
-offset_right = 964.0
-offset_bottom = 530.0
+offset_right = 1716.0
+offset_bottom = 865.0
 
 [node name="TitleLabel" type="Label" parent="Panel"]
 layout_mode = 0
@@ -23,10 +23,10 @@ text = "menu"
 [node name="CloseButton" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 730.0
-offset_top = 20.0
-offset_right = 776.0
-offset_bottom = 67.0
+offset_left = 1470.0
+offset_top = 24.0
+offset_right = 1516.0
+offset_bottom = 71.0
 icon = ExtResource("2_chkx3")
 flat = true
 icon_alignment = 1

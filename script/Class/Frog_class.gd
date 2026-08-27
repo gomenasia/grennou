@@ -5,6 +5,7 @@ const HUNGER_DECREASE_RATE = 14
 
 @export var hunger = 100
 @export var frog_name : String
+@export var frog_id: String
 
 var dragging: bool = false
 var drag_offset: Vector2 = Vector2.ZERO
@@ -32,12 +33,14 @@ func set_hunger(new_hunger_value: float):
 	#possibilité de mettre un changement vers un état affamée ici
 
 func _on_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
 			dragging = true
 			start_position = global_position
 			drag_offset = global_position - get_global_mouse_position()
 			z_index = 1
+		elif event.button_index == MOUSE_BUTTON_RIGHT:
+			UIManager.show_frog_card(self)
 
 func _input(event: InputEvent) -> void:
 	if dragging and event is InputEventMouseButton:

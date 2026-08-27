@@ -1,19 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://bsspvupg03rjf"]
 
-[ext_resource type="Script" uid="uid://bxw7vow3jvte4" path="res://script/Class/Frog_class.gd" id="1_8n6we"]
-[ext_resource type="Texture2D" uid="uid://dvkk88sybdjio" path="res://sprite/butt_frog.png" id="2_utswh"]
+[ext_resource type="Script" uid="uid://bxw7vow3jvte4" path="res://script/Class/Frog_class.gd" id="1_dfo6i"]
+[ext_resource type="Texture2D" uid="uid://coj2l4quudrmd" path="res://sprite/frog/dragon/dragon_splash-art.png" id="2_qgcot"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqnnh"]
 radius = 101.00495
 
-[node name="butt_frog" type="Node2D"]
-script = ExtResource("1_8n6we")
-frog_name = "butt frog"
+[node name="dragon_frog" type="Node2D"]
+script = ExtResource("1_dfo6i")
+frog_name = "dragon frog"
+frog_id = "001"
 metadata/_custom_type_script = "uid://bxw7vow3jvte4"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.741573, 0.7415729)
-texture = ExtResource("2_utswh")
+scale = Vector2(0.1555556, 0.15555556)
+texture = ExtResource("2_qgcot")
 
 [node name="Area2D" type="Area2D" parent="."]
 

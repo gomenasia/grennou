@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FrogData" load_steps=3 format=3 uid="uid://b53icorbwla27"]
+
+[ext_resource type="Texture2D" uid="uid://coj2l4quudrmd" path="res://sprite/frog/dragon/dragon_splash-art.png" id="1_8g2my"]
+[ext_resource type="Script" uid="uid://c8fkak0k0avvq" path="res://script/data/resources/frog_data.gd" id="2_8iohp"]
+
+[resource]
+script = ExtResource("2_8iohp")
+id = "001"
+display_name = "dragon_frog"
+portrait = ExtResource("1_8g2my")
+metadata/_custom_type_script = "uid://c8fkak0k0avvq"

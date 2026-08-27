@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://184md1dnvhqw"]
+
+[ext_resource type="PackedScene" uid="uid://dfusqpk6iklr8" path="res://scene/UI/inventory.tscn" id="1_eto6y"]
+[ext_resource type="PackedScene" uid="uid://d3d5ltw6jrxb7" path="res://scene/UI/frog_menu.tscn" id="2_u2xei"]
+
+[node name="menu" type="Node"]
+
+[node name="inventory" type="Node" parent="."]
+
+[node name="inventory" parent="inventory" instance=ExtResource("1_eto6y")]
+visible = false
+
+[node name="unlock_menu" parent="." instance=ExtResource("2_u2xei")]
+visible = false
