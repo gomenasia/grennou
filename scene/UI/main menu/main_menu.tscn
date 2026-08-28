@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://184md1dnvhqw"]
+
+[ext_resource type="PackedScene" uid="uid://d3d5ltw6jrxb7" path="res://scene/UI/main menu/unlock_menu.tscn" id="1_n7tu5"]
+[ext_resource type="Texture2D" uid="uid://bgcrmcinl8rc0" path="res://sprite/ui/main_menu_background.png" id="1_uykj3"]
+[ext_resource type="PackedScene" uid="uid://dfusqpk6iklr8" path="res://scene/UI/main menu/inventory.tscn" id="2_uykj3"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -693.30457
+offset_top = -489.5
+offset_right = 693.30457
+offset_bottom = 298.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uykj3")
+
+[node name="ContentArea" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -690.0
+offset_top = -485.0
+offset_right = 690.0
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="unlock_menu" parent="ContentArea" instance=ExtResource("1_n7tu5")]
+
+[node name="inventory2" parent="ContentArea" instance=ExtResource("2_uykj3")]
+visible = false
+
+[editable path="ContentArea/unlock_menu"]

@@ -10,6 +10,7 @@ radius = 101.00495
 script = ExtResource("1_dfo6i")
 frog_name = "dragon frog"
 frog_id = "001"
+slot_group = "FrogSlots"
 metadata/_custom_type_script = "uid://bxw7vow3jvte4"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

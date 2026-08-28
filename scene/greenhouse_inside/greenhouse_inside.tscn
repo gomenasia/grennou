@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://wxhcqyv24s2l"]
+[gd_scene load_steps=6 format=3 uid="uid://wxhcqyv24s2l"]
 
-[ext_resource type="Script" uid="uid://v1ow5m2cismt" path="res://script/greenhouse_inside.gd" id="1_ajp6n"]
+[ext_resource type="Script" uid="uid://v1ow5m2cismt" path="res://script/greenhouse/greenhouse_inside.gd" id="1_ajp6n"]
 [ext_resource type="Texture2D" uid="uid://rkpr0lnswt60" path="res://sprite/greenhouse_inside.png" id="2_he7fd"]
+[ext_resource type="PackedScene" uid="uid://bcfl1dqilfddd" path="res://scene/food/seed/princess_seed.tscn" id="3_00426"]
+[ext_resource type="PackedScene" uid="uid://fm51v8eca5tn" path="res://scene/greenhouse_inside/flower_pot.tscn" id="4_vt48b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00426"]
 size = Vector2(295, 1052.5)
@@ -19,3 +21,22 @@ texture = ExtResource("2_he7fd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porte"]
 position = Vector2(162.5, 542.75)
 shape = SubResource("RectangleShape2D_00426")
+
+[node name="princess_food" parent="." instance=ExtResource("3_00426")]
+position = Vector2(1723, 870)
+
+[node name="flowerpots" type="Node" parent="."]
+
+[node name="flower pot" parent="flowerpots" instance=ExtResource("4_vt48b")]
+position = Vector2(873, 511)
+scale = Vector2(0.655, 0.655)
+
+[node name="flower pot2" parent="flowerpots" instance=ExtResource("4_vt48b")]
+position = Vector2(634, 585)
+
+[node name="flower pot4" parent="flowerpots" instance=ExtResource("4_vt48b")]
+position = Vector2(1372.0001, 537)
+scale = Vector2(0.655, 0.655)
+
+[node name="flower pot3" parent="flowerpots" instance=ExtResource("4_vt48b")]
+position = Vector2(1156, 586)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcfl1dqilfddd"]
+
+[ext_resource type="Script" uid="uid://c2debelsyv3u6" path="res://script/Class/Food_class.gd" id="1_aqoxq"]
+[ext_resource type="Texture2D" uid="uid://c6b3r563qg4wt" path="res://sprite/plant/princess_plant/princesse_seed.png" id="1_hqbrp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aqoxq"]
+radius = 104.04326
+
+[node name="princess_food" type="Node2D"]
+script = ExtResource("1_aqoxq")
+slot_group = "FlowerPots"
+metadata/_custom_type_script = "uid://c2debelsyv3u6"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.796, 0.79600006)
+texture = ExtResource("1_hqbrp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_aqoxq")

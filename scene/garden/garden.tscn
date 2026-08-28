@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bpn2bsowffydo" path="res://scene/garden/greenhouse.tscn" id="3_c5aao"]
 [ext_resource type="PackedScene" uid="uid://24dlyu5g61kb" path="res://scene/garden/lily_pad.tscn" id="4_l67df"]
 [ext_resource type="PackedScene" uid="uid://bsspvupg03rjf" path="res://scene/frog/dragon/dragon_frog.tscn" id="5_i3a5j"]
-[ext_resource type="Script" uid="uid://cdat8cfylhxo0" path="res://script/garden/frog_slots_manager.gd" id="5_v8cra"]
+[ext_resource type="Script" uid="uid://cdat8cfylhxo0" path="res://script/garden/DragSlotManager.gd" id="5_v8cra"]
 
 [node name="garden" type="Node2D"]
 
